@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday</title>
+  <style>
+    body {
+      background: #fff8f5;
+      text-align: center;
+      padding-top: 100px;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    h1 {
+      font-size: 3em;
+      color: #ff3399;
+      animation: typing 4s steps(30, end), blink .75s step-end infinite;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 3px solid #ff3399;
+      display: inline-block;
+    }
+
+    p {
+      font-size: 1.5em;
+      color: #6633cc;
+      margin-top: 20px;
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent }
+    }
+
+    .confetti {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: #ff66cc;
+      top: 0;
+      animation: fall 3s infinite linear;
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    /* Create multiple confetti */
+    .confetti:nth-child(odd) { background: #66ccff; }
+    .confetti:nth-child(3n) { background: #ffff66; }
+    .confetti:nth-child(4n) { background: #ff9966; }
+
+  </style>
+</head>
+<body>
+
+  <!-- Confetti blast -->
+  <div class="confetti" style="left:10%; animation-delay:0s;"></div>
+  <div class="confetti" style="left:30%; animation-delay:1s;"></div>
+  <div class="confetti" style="left:50%; animation-delay:0.5s;"></div>
+  <div class="confetti" style="left:70%; animation-delay:0.3s;"></div>
+  <div class="confetti" style="left:90%; animation-delay:1.2s;"></div>
+
+  <!-- Main content -->
+  <h1>Happy Birthday!</h1>
+  <p>Best Wishes for You 🎉🎂</p>
+
+</body>
+</html>
